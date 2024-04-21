@@ -184,7 +184,7 @@ tests:
       INNER JOIN configs c ON r.config_id = c.id
       INNER JOIN experiments e ON r.experiment_id = e.id
       WHERE e.exclude_from_analysis = false AND
-            e.branch = '${BRANCH}' AND
+            e.branch = 'trunk' AND
             e.username = 'ci' AND
             c.store = 'MEM' AND
             c.cache = true AND
