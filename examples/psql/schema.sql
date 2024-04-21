@@ -28,7 +28,6 @@ CREATE TABLE IF NOT EXISTS results (
   experiment_id TEXT NOT NULL REFERENCES experiments(id),
   config_id INTEGER NOT NULL REFERENCES configs(id),
 
-  samples BIGINT NOT NULL,
   process_cumulative_rate_mean BIGINT NOT NULL,
   process_cumulative_rate_stderr BIGINT NOT NULL,
   process_cumulative_rate_diff BIGINT NOT NULL,

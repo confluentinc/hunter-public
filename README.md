@@ -161,7 +161,7 @@ tests:
   aggregate_mem:
     type: postgres
     time_column: commit_ts
-    attributes: [experiment_id, config_id, commit, samples]
+    attributes: [experiment_id, config_id, commit]
     metrics:
       process_cumulative_rate_mean:
         direction: 1
@@ -178,7 +178,6 @@ tests:
              r.process_cumulative_rate_mean, 
              r.process_cumulative_rate_stderr, 
              r.process_cumulative_rate_diff, 
-             r.samples, 
              r.experiment_id, 
              r.config_id
       FROM results r
